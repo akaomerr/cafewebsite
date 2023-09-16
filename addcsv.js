@@ -9,6 +9,7 @@ function clearForm() {
   document.getElementById("cafedescription").value = "";
   document.getElementById("cafelocation").value = "";
   document.getElementById("token").value="";
+  document.getElementById("cafeimage").value="";
 }
 
 document.getElementById("csvform").addEventListener("submit", function (event) {
@@ -18,8 +19,8 @@ document.getElementById("csvform").addEventListener("submit", function (event) {
   const cafedescription = document.getElementById("cafedescription").value;
   const cafelocation = document.getElementById("cafelocation").value;
   const accessToken = document.getElementById("token").value;
-  const newData = `\n${cafename},${cafedescription},${cafelocation}`;
-
+  const imagelink=document.getElementById("cafeimage").value;
+  const newData = `\n${cafename},${cafedescription},${cafelocation},${imagelink}`;
   fetch(apiUrl, {
     headers: {
       'Authorization': `token ${accessToken}`,
@@ -49,7 +50,7 @@ document.getElementById("csvform").addEventListener("submit", function (event) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: 'Data update',
+          message: 'Cafe Add',
           content: updatedContentBase64,
           sha: data.sha,
         }),
