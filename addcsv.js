@@ -20,7 +20,7 @@ document.getElementById("csvform").addEventListener("submit", function (event) {
   const cafelocation = document.getElementById("cafelocation").value;
   const accessToken = document.getElementById("token").value;
   const imagelink=document.getElementById("cafeimage").value;
-  const newData = `\n${cafename},${cafedescription},${cafelocation},${imagelink}`;
+  const newData = `${cafename}|${cafedescription}|${cafelocation}|${imagelink}\n`;
   fetch(apiUrl, {
     headers: {
       'Authorization': `token ${accessToken}`,

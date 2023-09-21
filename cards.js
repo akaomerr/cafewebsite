@@ -9,7 +9,7 @@ onload = async () => {
     csvData.push(data);
     const rows = csvData[0].split('\r');
     for (let i=0;i<rows.length;i++){
-      const headers=rows[i].split(',');
+      const headers=rows[i].split('|');
       cafes.push(headers);
     }
     cafes.forEach((data) => {
@@ -26,13 +26,14 @@ const cardContainer = document.querySelector(".row");
     card.className = "col";
     card.innerHTML = `
       <div class="card" style="width: 18rem;">
-        <img src="${data[2]}" class="card-img-top" alt="${data[0]}">
+        <img src="${data[3]}" class="card-img-top" alt="${data[0]}">
         <div class="card-body">
           <h5 class="card-title">${data[0]}</h5>
           <p class="card-text">${data[1]}</p>
-          <a href="#" class="btn btn-warning">Detaylar</a>
-        </div>
+          <a href="detail.html?id=${data[0]}" class="btn btn-warning">Details</a>
+          </div>
       </div>
     `;
     return card;
   }
+

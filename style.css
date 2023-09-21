@@ -1,0 +1,21 @@
+.card {
+    transform-origin: center; 
+    transition: transform 0.4s ease; 
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
+.detail-img-div{
+  padding-top: 80px;
+  padding-left: 60px;
+}
+.detail-img{
+  width: 35%; 
+  border-radius: 35px;
+}
+@media (max-width: 768px){  
+  .detail-img{
+    width: 60%;
+  }
+}
+  
