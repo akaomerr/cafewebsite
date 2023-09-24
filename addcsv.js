@@ -24,7 +24,7 @@ document.getElementById("csvform").addEventListener("submit", function (event) {
   const wifiquality=document.getElementById("wifi-quality").value;
   const coffeequality=document.getElementById("coffee-quality").value;
   const environmentquality=document.getElementById("environment-quality").value;
-  const newData = `${cafename}|${cafedescription}|${cafelocation}|${imagelink}|${detaildescription}|${wifiquality}|${coffeequality}|${environmentquality}\n`;
+  const newData = `\n${cafename}|${cafedescription}|${cafelocation}|${imagelink}|${detaildescription}|${wifiquality}|${coffeequality}|${environmentquality}`;
   fetch(apiUrl, {
     headers: {
       'Authorization': `token ${accessToken}`,
