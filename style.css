@@ -62,7 +62,7 @@
     text-align: center;
   }
   .copyright{
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding: 10px 0;
