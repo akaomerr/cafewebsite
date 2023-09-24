@@ -10,7 +10,7 @@
   padding-top: 80px;
   padding-left: 60px;
   padding-right: 60px;
-  flex-wrap: wrap;
+  padding-bottom: 50px;
 }
 .detail-img{
   width: 500px; 
@@ -28,21 +28,30 @@
 .text-container{
   margin-top: 70px;
   border-radius: 15px;
-  background-color: #B4B4B3;
+  background-color: #EEE0C9;
   float: left;
-  min-width: 50%;
+  max-width: 50%;
+  text-align: center;
 }
 .text-div{
   padding: 20px;
   font-weight: bold;
 }
 @media (max-width: 768px){  
-  .detail-img{
+  .img-div{
     width: 500px;
+  }
+  .detail-div {
+    display: grid;
+    place-items: center;
+    text-align: center;
   }
   .text-container{
     float: left;
     min-width: 80%;
+    max-width: 100%;
+    text-align: center;
   }
+
 }
   

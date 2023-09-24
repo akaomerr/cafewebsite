@@ -35,7 +35,7 @@ function createCard(data) {
       <div class="card-body">
         <h5 class="card-title">${data[0]}</h5>
         <p class="card-text">${data[1]}</p>
-        <a href="detail.html?id=${data[0]}" class="btn btn-warning">Details</a>
+        <a href="detail.html?id=${data[0]}" class="btn" style="background-color: #E2C799">Details</a>
       </div>
     </div>
   `;
