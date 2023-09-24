@@ -20,7 +20,11 @@ document.getElementById("csvform").addEventListener("submit", function (event) {
   const cafelocation = document.getElementById("cafelocation").value;
   const accessToken = document.getElementById("token").value;
   const imagelink=document.getElementById("cafeimage").value;
-  const newData = `${cafename}|${cafedescription}|${cafelocation}|${imagelink}\n`;
+  const detaildescription=document.getElementById("detaildescription").value;
+  const wifiquality=document.getElementById("wifi-quality").value;
+  const coffeequality=document.getElementById("coffee-quality").value;
+  const environmentquality=document.getElementById("environment-quality").value;
+  const newData = `${cafename}|${cafedescription}|${cafelocation}|${imagelink}|${detaildescription}|${wifiquality}|${coffeequality}|${environmentquality}\n`;
   fetch(apiUrl, {
     headers: {
       'Authorization': `token ${accessToken}`,
