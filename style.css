@@ -37,6 +37,11 @@
   padding: 20px;
   font-weight: bold;
 }
+.copyright{
+  text-align: center;
+  font-weight: bold;
+  color: #957777;
+}
 @media (max-width: 768px){  
   .img-div{
     width: 500px;
