@@ -6,8 +6,8 @@ onload = async () => {
   try {
     const res = await fetch("./data.csv");
     const data = await res.text();
-    console.log("CSV Verileri:",data);
     csvData.push(data);
+    console.log("CSV Verileri:",csvData);
     const rows = csvData[0].split('\r\n').filter(row => row.trim() !== '');
     console.log("Satırlar:",rows);
     rows.forEach(row => {
