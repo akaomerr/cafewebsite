@@ -6,6 +6,7 @@ onload = async () => {
   try {
     const res = await fetch("./data.csv");
     const data = await res.text();
+    console.log(data)
     csvData.push(data);
     const rows = csvData[0].split('\r\n').filter(row => row.trim() !== '');
     rows.forEach(row => {
