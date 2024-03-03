@@ -65,6 +65,16 @@
     text-align: center;
   }
 }
+@media (max-width: 500px){
+  .card{
+    margin-left: 8% !important;
+  }
+}
+@media (max-width: 768px){
+  .card{
+    margin-left: 20%;
+  }
+}
 @media (max-width: 550px){  
   .detail-img {
     width: 110% !important; 
