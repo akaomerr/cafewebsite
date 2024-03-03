@@ -19,7 +19,7 @@ onload = async () => {
 }
 
 function displayCafes(data) {
-  cardContainer.innerHTML = ''; // Clear the existing cards
+  cardContainer.innerHTML = '';
   data.forEach((cafe) => {
     const card = createCard(cafe);
     cardContainer.appendChild(card);
