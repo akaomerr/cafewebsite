@@ -30,6 +30,14 @@ onload = async () => {
     coffeequalitynav.innerHTML=`Coffee: ${selectedCafe[6]}`
     const workenvironmentnav=document.getElementById('workenvironment-nav');
     workenvironmentnav.innerHTML=`Work Environment: ${selectedCafe[7]}`
+    const cafelocationnav=document.getElementById('cafelocation-nav');
+    const location_link=document.createElement('a');
+    location_link.href=selectedCafe[2];
+    location_link.textContent=`Location`
+    location_link.setAttribute('target', '_blank');
+    cafelocationnav.appendChild(location_link);
+    location_link.style.color = 'inherit';
+    location_link.style.textDecoration = 'none';
   } catch (error) {
     console.error("Veri yüklenirken bir hata oluştu:", error);
   }

@@ -7,6 +7,10 @@ const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/$
 function clearForm() {
   document.getElementById("cafename").value = "";
   document.getElementById("cafedescription").value = "";
+  document.getElementById("detaildescription").value="";
+  document.getElementById("wifi-quality").value="🌐";
+  document.getElementById("coffee-quality").value="☕";
+  document.getElementById("environment-quality").value="⭐";
   document.getElementById("cafelocation").value = "";
   document.getElementById("token").value="";
   document.getElementById("cafeimage").value="";
@@ -74,6 +78,7 @@ document.getElementById("csvform").addEventListener("submit", function (event) {
       clearForm();
     })
     .catch((error) => {
-      console.error('Hata oluştu:', error);
+      console.error('Token Error:', error);
+      clearForm();
     });
 });
