@@ -7,7 +7,7 @@ onload = async () => {
     const res = await fetch("./data.csv");
     const data = await res.text();
     csvData.push(data);
-    const rows = csvData[0].split('\r');
+    const rows = csvData[0].split('\r\n');
     for (let i = 0; i < rows.length; i++) {
       const headers = rows[i].split('|');
       cafes.push(headers);
