@@ -1,5 +1,5 @@
 const repoOwner = "akaomerr";
-const repoName = "cafeswebsite";
+const repoName = "cafewebsite";
 const filePath = "data.csv";
 
 const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
