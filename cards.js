@@ -8,7 +8,7 @@ onload = async () => {
     const data = await res.text();
     csvData.push(data);
     console.log("CSV Verileri:",csvData);
-    const rows = csvData[0].split('\r\n').filter(row => row.trim() !== '');
+    const rows = csvData[0].split('\n').filter(row => row.trim() !== '');
     console.log("Satırlar:",rows);
     rows.forEach(row => {
       const columns = row.split('|');
