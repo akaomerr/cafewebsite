@@ -7,14 +7,11 @@ onload = async () => {
     const res = await fetch("./data.csv");
     const data = await res.text();
     csvData.push(data);
-    console.log("CSV Verileri:",csvData);
     const rows = csvData[0].split('\n').filter(row => row.trim() !== '');
-    console.log("Satırlar:",rows);
     rows.forEach(row => {
       const columns = row.split('|');
       cafes.push(columns);
     });
-    console.log(cafes);
     displayCafes(cafes);
   } catch (error) {
     console.error("Veri yüklenirken bir hata oluştu:", error);
